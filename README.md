@@ -1,18 +1,18 @@
-# truffle-test-helpers
+# truffle-test-utils
 
-Helpers to support Truffle's JavaScript tests for Ethereum smart contracts.
+Utils to support Truffle's JavaScript tests for Ethereum smart contracts.
 
 ## Install
 
-    npm install truffle-test-helpers
+    npm install truffle-test-utils
 
 ## How to use
 
 To use these helpers, include them at the top of your tests:
 
-    require('truffle-test-helpers').init();
+    require('truffle-test-utils').init();
 
-## Helpers
+## Utils
 
 ### Event testing
 
