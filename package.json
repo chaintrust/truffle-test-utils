@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChainTrust/truffle-test-helpers.git"
+    "url": "git+https://github.com/chaintrust/truffle-test-helpers.git"
   },
   "keywords": [
     "truffle",
@@ -21,9 +21,9 @@
   "author": "Philippe Bernard",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ChainTrust/truffle-test-helpers/issues"
+    "url": "https://github.com/chaintrust/truffle-test-helpers/issues"
   },
-  "homepage": "https://github.com/ChainTrust/truffle-test-helpers#readme",
+  "homepage": "https://github.com/chaintrust/truffle-test-helpers#readme",
   "dependencies": {
     "chai": "^4.1.2"
   }
