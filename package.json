@@ -1,0 +1,30 @@
+{
+  "name": "truffle-test-helpers",
+  "version": "0.0.1",
+  "description": "Helpers to support Truffle's JavaScript tests for Ethereum smart contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChainTrust/truffle-test-helpers.git"
+  },
+  "keywords": [
+    "truffle",
+    "mocha",
+    "chai",
+    "web3",
+    "ethereum",
+    "test"
+  ],
+  "author": "Philippe Bernard",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ChainTrust/truffle-test-helpers/issues"
+  },
+  "homepage": "https://github.com/ChainTrust/truffle-test-helpers#readme",
+  "dependencies": {
+    "chai": "^4.1.2"
+  }
+}
