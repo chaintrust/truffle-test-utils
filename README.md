@@ -30,3 +30,18 @@ To make sure a smart contract call generates the expected events:
     }, 'The event is emitted');
 
 You can also use `assert.web3Events` (note the plural) with an array of expected events.
+
+If you prefer `expect`, this is the example code:
+
+```
+// Regular call thanks to Truffle
+let result = await testedSmartContract.testedFunction();
+// Check event
+expect.web3Event(result, {
+  event: 'TestedEvent',
+  args: {
+    param_1: 'Some value',
+    param_2: 0x123456 // No need for toNumber hassle
+  }
+}, 'The event is emitted');
+```
