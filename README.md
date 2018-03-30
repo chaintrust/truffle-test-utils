@@ -32,7 +32,7 @@ To make sure a smart contract call generates the expected event:
     }, 'The event is emitted');
 
 By omitting the `args` parameter, only the event itself is tested,
-no matter what its artuments are:
+no matter what its arguments are:
 
     let result = await testedSmartContract.testedFunction();
     assert.web3Event(result, {
