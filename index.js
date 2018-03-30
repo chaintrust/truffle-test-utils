@@ -30,8 +30,6 @@ module.exports = {
     if (typeof expect !== 'undefined') {
       expect.web3Events = function(observedTransactionResult, expectedEvents, message) {
         let entries = buildObservedEventsForComparison(observedTransactionResult, expectedEvents);
-        // expect({a: 1}).to.deep.equal({a: 1});
-        // expect.deepEqual(entries, expectedEvents, message);
         expect(entries).to.deep.equal(expectedEvents);
       };
 
