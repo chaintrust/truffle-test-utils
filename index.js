@@ -1,7 +1,7 @@
 
 module.exports = {
   init: function() {
-    if (assert !== undefined) {
+    if (typeof assert !== 'undefined') {
       assert.web3Events = function(observedTransactionResult, expectedEvents, message) {
         let entries = observedTransactionResult.logs.map(function(logEntry) {
           return {
@@ -23,7 +23,7 @@ module.exports = {
       };
     }
 
-    if (expect !== undefined) {
+    if (typeof expect !== 'undefined') {
       expect.web3Events = function(observedTransactionResult, expectedEvents, message) {
         let entries = observedTransactionResult.logs.map(function(logEntry) {
           return {
