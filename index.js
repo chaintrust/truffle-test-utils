@@ -1,16 +1,28 @@
 
 function buildObservedEventsForComparison(observedTransactionResult, expectedEvents) {
   return observedTransactionResult.logs.map(function(logEntry) {
-    return {
-      event: logEntry.event,
-      args: Object.keys(logEntry.args).reduce(function(previous, current) {
+    // Event name
+    let event = {
+      event: logEntry.event
+    };
+
+    // Event arguments
+    let expectedEntry = expectedEvents.find(function(evt) {
+      return (evt.event === logEntry.event)
+    });
+    // Ignore the arguments when they are not tested
+    // (ie. expectedEntry.args is undefined)
+    if ((! expectedEntry) || (expectedEntry && expectedEntry.args)) {
+      event.args = Object.keys(logEntry.args).reduce(function(previous, current) {
         previous[current] =
           (typeof logEntry.args[current].toNumber === 'function')
             ? logEntry.args[current].toNumber()
             : logEntry.args[current];
         return previous;
-      }, {})
+      }, {});
     }
+
+    return event;
   });
 }
 

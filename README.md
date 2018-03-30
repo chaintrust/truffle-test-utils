@@ -29,6 +29,23 @@ To make sure a smart contract call generates the expected events:
       }
     }, 'The event is emitted');
 
+By omitting the `args` parameter, only the event itself is tested,
+no matter what its artuments are:
+
+    let result = await testedSmartContract.testedFunction();
+    assert.web3Event(result, {
+      event: 'TestedEvent'
+      // Any argument is allowed
+    }, 'The event is emitted');
+
+So to make sure that an event has no arguments, pass an empty hash:
+
+    let result = await testedSmartContract.testedFunction();
+    assert.web3Event(result, {
+      event: 'TestedEvent',
+      args: {} // Event should have no argument at all
+    }, 'The event is emitted');
+
 You can also use `assert.web3Events` (note the plural) with an array of expected events.
 
 If you prefer `expect`, this is the example code:
